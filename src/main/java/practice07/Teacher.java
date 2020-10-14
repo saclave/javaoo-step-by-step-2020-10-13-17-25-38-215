@@ -1,8 +1,9 @@
 package practice07;
 
+import static CommonConstants.CommonConstants.TEACHER;
+
 public class Teacher extends Person{
     private Klass klass;
-    private final String TEACHER = " I am a Teacher.";
 
     public Teacher(String name, int age, Klass klass) {
         super(name, age);
@@ -28,10 +29,10 @@ public class Teacher extends Person{
 
     public String introduceWith(Student student){
         if(student.getKlass() == klass){
-            return super.introduce() + TEACHER + " I teach Jerry.";
+            return super.introduce() + TEACHER + " I teach "+student.getName()+".";
         }
         else{
-            return super.introduce() + TEACHER + " I don't teach Jerry.";
+            return super.introduce() + TEACHER + " I don't teach "+student.getName()+".";
         }
     }
 }

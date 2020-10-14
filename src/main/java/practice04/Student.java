@@ -1,5 +1,7 @@
 package practice04;
 
+import static CommonConstants.CommonConstants.STUDENT;
+
 public class Student extends Person{
     private int klass;
 
@@ -14,6 +16,6 @@ public class Student extends Person{
 
 
     public String introduce(){
-        return super.basicIntroduce() + " I am a Student. I am at Class "+klass+".";
+        return super.basicIntroduce() + " "+ STUDENT +" I am at Class "+klass+".";
     }
 }
