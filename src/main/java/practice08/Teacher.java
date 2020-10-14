@@ -29,10 +29,10 @@ public class Teacher extends Person{
 
     public String introduceWith(Student student){
         if(student.getKlass() == klass){
-            return super.introduce() + TEACHER + " I teach Jerry.";
+            return super.introduce() + TEACHER + " I teach "+student.getName()+".";
         }
         else{
-            return super.introduce() + TEACHER + " I don't teach Jerry.";
+            return super.introduce() + TEACHER + " I don't teach "+student.getName()+".";
         }
     }
 }
