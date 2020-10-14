@@ -4,8 +4,8 @@ import java.util.Collections;
 
 public class Klass {
     private int number;
-    private Student student;
     private School school;
+    public Student leader;
 
     public Klass(int number) {
         this.number = number;
@@ -24,7 +24,7 @@ public class Klass {
             System.out.print("It is not one of us.\n");
         }
         else {
-            this.student = student;
+            this.leader = student;
         }
         return this;
     }
@@ -33,7 +33,7 @@ public class Klass {
         return school == null;
     }
 
-    public Student getLeader() { return student; }
+    public Student getLeader() { return leader; }
 
     public void appendMember(Student student) {
          school = new School(Collections.singletonList(student));

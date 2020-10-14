@@ -16,7 +16,7 @@ public class Student extends Person{
 
 
     public String introduce(){
-        if(klass.getLeader() == this) {
+        if(klass.leader == this) {
             return super.introduce() + " "+STUDENT+" I am Leader of " + klass.getDisplayName() + ".";
         }
         return super.introduce() + " "+STUDENT+" I am at " + klass.getDisplayName() + ".";
