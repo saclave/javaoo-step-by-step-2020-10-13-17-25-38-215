@@ -53,7 +53,7 @@ public class Teacher extends Person{
     }
 
     public String introduceWith(Student student){
-        if(student.getKlass() == klass){
+        if(klasses.contains(student.getKlass())){
             return super.introduce() + TEACHER + " I teach "+student.getName()+".";
         }
         else{
@@ -62,6 +62,7 @@ public class Teacher extends Person{
     }
 
     public boolean isTeaching(Student student) {
-        return klass.isIn(student);
+        return klasses.stream()
+                .anyMatch(stud -> stud.equals(student.getKlass()));
     }
 }
