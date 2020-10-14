@@ -2,7 +2,9 @@ package practice02;
 
 public class Student {
 
-    private final int klass;
+    private int klass;
+    private String name;
+    private int age;
 
     public Student(String name, int age, int klass) {
         this.name = name;
@@ -18,8 +20,13 @@ public class Student {
         return age;
     }
 
+    public int getKlass() {
+        return klass;
+    }
+
+
     public String introduce(){
-        return "My name is Tom. I am 21 years old.";
+        return "I am a Student. I am at Class 2.";
     }
 
 }
