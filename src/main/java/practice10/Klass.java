@@ -39,8 +39,8 @@ public class Klass {
         school = new School(Collections.singletonList(student));
     }
 
-    public boolean isIn(Student student){
-        return student == student;
+    public Klass isIn(Student student){
+        return student.getKlass();
     }
 
 }

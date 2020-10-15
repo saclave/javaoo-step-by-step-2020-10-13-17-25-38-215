@@ -64,7 +64,7 @@ public class Teacher extends Person{
 
     public boolean isTeaching(Student student) {
         return klasses.stream()
-                .anyMatch(stud -> stud.equals(student.getKlass()));
+                .anyMatch(stud -> stud.equals(stud.isIn(student)));
     }
 
 }
